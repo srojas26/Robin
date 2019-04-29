@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', serif;
+  background: black;
+}
+
+
+/* Navigation */
+#main-nav {
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#main-nav ul li a:hover {
+  color: #898989;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* SHOWCASE */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+#showcase {
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+#showcase:before {
+  content: '';
+  background: url('../img/robbin.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+}
+
+.showcase-heading {
+  font-size: 3rem;
+}
+
+/* ABOUT */
+
+#main {
+  text-align: center;
+  background: black;
+  color: #fff;
+  padding: 1rem;
+  border-bottom: dashed 0.5px #898989;
+}
+
+.about {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  padding: 2rem;
+  grid-gap: 1rem;
+  line-height: 1.5;
+
+}
+
+/* GALLERY */
+.gallery-heading {
+  color: #fff;
+  text-align: center;
+  max-width: 1400px;
+  border-top: #898989 dashed 0.5px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 0.5rem;
+  margin: 2rem auto;
+  grid-auto-flow: dense;
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.9;
+}
+
+.box-1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.box-2 {
+  grid-column: 2 / span 1 ;
+  grid-row: 1 / span 2;
+}
+
+.box-3 {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 4;
+}
+
+.box-4 {
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 3;
+}
+
+.box-5 {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 2;
+}
+
+.box-6 {
+  grid-column: 3 / span 2;
+  grid-row: 6 / span 4;
+}
+
+.quote {
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+
+#footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 3rem;
+  color: #fff;
+  border-top: dashed 0.5px #898989;
+
+}
